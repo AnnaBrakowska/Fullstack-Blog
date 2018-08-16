@@ -1,5 +1,5 @@
 require 'sinatra'
-require 'sinatra/reloader'
+# require 'sinatra/reloader'
 require 'sinatra/activerecord'
 require 'sinatra/flash'
 require './models/tag.rb'
@@ -9,7 +9,7 @@ require './models/post_tag.rb'
 
 
 enable :sessions
-set :database, {adapter: "postgresql", database: "rumblr"}
+
 
 
 
