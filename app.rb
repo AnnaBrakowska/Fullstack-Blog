@@ -7,6 +7,7 @@ require './models/user.rb'
 require './models/post.rb'
 require './models/post_tag.rb'
 
+
 enable :sessions
 set :database, {adapter: "postgresql", database: "rumblr"}
 
@@ -77,15 +78,12 @@ end
 
 post '/createpost' do
     @tag = params[:check]
-     @post = Post.create(user_id: session[:user_id], title: params[:title], text: params[:text], image: params[:image])
+
+    @post = Post.create(user_id: session[:user_id], title: params[:title], text: params[:text], image: params[:image])
     @tagged_post = PostTag.create(post_id: @post.id, tag_id: @tag.to_i)
-     redirect "/posts"
-end	
 
-
-
-
-
+    redirect "/posts"
+end
 
 
 
@@ -116,10 +114,12 @@ end
 
 
 get '/delete/:post_id' do
+
     @post_id = params[:post_id]
     @posttagtodelete = PostTag.where(post_id: params[:post_id])
     Post.delete(@post_id)
     PostTag.delete(@posttagtodelete)
+
     redirect "/myposts"
 
 end
