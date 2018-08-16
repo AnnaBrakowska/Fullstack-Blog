@@ -15,16 +15,16 @@ ActiveRecord::Schema.define(version: 2018_08_13_174956) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "post_tags", force: :cascade do |t|
+    t.integer "post_id"
+    t.integer "tag_id"
+  end
+
   create_table "posts", force: :cascade do |t|
     t.integer "user_id"
     t.string "title"
     t.text "text"
     t.string "image"
-  end
-
-  create_table "posts_tags", force: :cascade do |t|
-    t.integer "post_id"
-    t.integer "tag_id"
   end
 
   create_table "tags", force: :cascade do |t|
