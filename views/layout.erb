@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tech Notes</title>
+
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.3/dist/semantic.min.css">
+<link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+
+<body>
+
+<div id="users">
+<div class="ui menu">
+  <a class="item" href="/"><i class="home icon"></i>
+    Home
+  </a>
+  <a class="item" href="/createpost"><i class="pencil alternate icon"></i>
+    Create Article
+  </a>
+  <a class="item" href="/myposts"><i class="folder open outline icon"></i>
+  My Articles
+</a>
+  <a class="item" href="/users"><i class="users icon"></i>
+    Users
+  </a>
+  <a class="item" href="/myprofile"><i class="edit icon"></i>
+  Edit Profile
+</a>
+<a class="item" href="/signout"><i class="sign-out icon"></i>
+  Sign Out
+</a>
+</a>
+<a class="item"><input placeholder="Search articles..."><i class="search icon"></i></input>
+</a>
+</div>
+
+<%=yield%>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.js"></script>
+</html>

@@ -1,0 +1,50 @@
+<div id="profile">
+  <img class="ui medium circular image" src="<%= @current.image_url%>">
+
+
+  <form method="POST" action="/myprofile" class="ui form" style="width:50%">
+    <input type="hidden" name="_method" value="PUT">
+    <div class="field">
+      <label>First Name</label>
+      <input type="text" name="user_name" placeholder="User Name..." value="<%= @current.user_name%> ">
+    </div>
+
+    <div class="field">
+      <label>First Name</label>
+      <input type="text" name="first_name" placeholder="First Name..." value="<%= @current.first_name%> ">
+    </div>
+
+    <div class="field">
+      <label>Last Name</label>
+      <input type="text" name="last_name" placeholder="Last Name..." value="<%= @current.last_name%> ">
+    </div>
+
+    <div class="field">
+      <label>Email</label>
+      <input type="text" name="email" placeholder="Email Address..." value="<%= @current.email%> ">
+    </div>
+
+    <div class="field">
+      <label>Birthday</label>
+      <input type="text" name="birthday" id="birthday" placeholder="Birthday..." value="<%= @current.birthday%> ">
+    </div>
+
+    <div class="field">
+      <label>Image URL</label>
+      <input type="text" name="image" placeholder="Image URL..." value="<%= @current.image_url%> ">
+    </div>
+
+    <div class="field">
+      <label>Password</label>
+      <input type="password" name="password" placeholder="Password..." value="<%= @current.password%> ">
+    </div>
+
+    <div id="create">
+        <div class="ui buttons">
+            <button class="ui button"><a href="/myprofile/delete">Delete Account</a></button>
+            <div class="or"></div>
+            <button class="ui green button">Save Changes</button>
+        </div>
+    </div>
+  </form>
+ </div>

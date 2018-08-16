@@ -1,0 +1,25 @@
+<div class="ui special cards">
+<% @posts.each do |post| %>
+  <div class="card">
+    <div class="blurring dimmable image">
+      <img class="posts" src=<%=post.image%>>
+    </div>
+
+    <div class="content">  
+      <a class="header" href="/specific_post/<%=post.id%>"><%=post.title%></a>
+    </div>
+
+    <div class="extra content">
+      <a> 
+        <i class="id card outline icon"></i>
+      <% begin %>
+      <% @createdBy = User.find(post.user_id) %>
+      <% rescue ActiveRecord::RecordNotFound => e %>
+      <%  @createdBy.user_name = "Anonymous" %>
+      <% end %>
+      <span class="date">Created by: <%= @createdBy.user_name %></span>
+      </a>
+    </div>
+  </div>
+  <%end%>
+</div>

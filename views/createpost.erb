@@ -1,0 +1,27 @@
+<div id="create_post">
+    <form action="/createpost" method="post">
+        <div class="ui form">
+
+            <div class="field">
+                <label>Title</label>
+                <textarea rows="1" name ="title" placeholder="Please type a title...."></textarea>
+            </div>
+
+            <div class="field">
+                <label>Image</label>
+                <input type="text" name="image" placeholder="Please enter image url..."></input>
+                <label>Text</label>
+                <textarea name="text" placeholder="Please type your article here..."></textarea>
+            </div>
+
+            <div id="create_button">
+                <div class="ui buttons">
+                    <button class="ui button"><a href="/myposts">Cancel</a></button>
+                    <div class="or"></div>
+                    <button class="ui green button">Publish</button>
+                </div>
+            </div>
+            
+        </div>
+    </form>
+</div>

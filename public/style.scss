@@ -1,0 +1,244 @@
+body {
+  #background {
+    background-image: url("background.jpeg");
+    background-repeat: no-repeat;
+    background-size: 50%;
+    overflow: hidden;
+    min-height: 100vh;
+    position: relative;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .ui.form {
+    div#create_button {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+  .ui.piled.segment {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    h1.title {
+      text-align: center;
+    }
+
+    div#post_image {
+      padding: 1%;
+      display: flex;
+      justify-content: center;
+      img {
+        width: 88%;
+      }
+    }
+    div#paragraph {
+      padding-left: 7%;
+      padding-right: 7%;
+      text-align: justify;
+      font-family: "Crimson Text", serif;
+      font-size: 2.5vh;
+    }
+  }
+
+  div#create_post {
+    width: 70%;
+    position: relative;
+    left: 15%;
+    padding-top: 2%;
+  }
+
+  #container {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    text-align: center;
+    border: 1.5px solid lightgray;
+    border-radius: 10%;
+    padding: 2.5%;
+    font-family: Lato;
+    box-shadow: 1px 3px 6px 1px gray;
+  }
+  div#profile {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    padding-top: 2%;
+
+    .ui.medium.circular.image {
+      height: 300px;
+      width: 300px;
+    }
+    div#create {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+
+  .ui.special.cards {
+    padding: 2%;
+    display: flex;
+    justify-content: center;
+    img.posts {
+      width: 100%;
+      height: 250px;
+    }
+    img.users {
+      width: 100%;
+      height: 280px;
+    }
+  }
+
+  .modal {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: left;
+    background: rgba(0, 0, 0, 0.9);
+    transition: opacity 0.25s ease;
+  }
+
+  .modal__bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    cursor: pointer;
+  }
+
+  .modal-state {
+    display: none;
+  }
+
+  .modal-state:checked + .modal {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .modal-state:checked + .modal .modal__inner {
+    top: 0;
+  }
+
+  .modal__inner {
+    transition: top 0.25s ease;
+    position: absolute;
+    text-align: center;
+    top: -20%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    margin: auto;
+    overflow: auto;
+    background: #fff;
+    border-radius: 5px;
+    padding: 1em 2em;
+    height: 50%;
+    form {
+      input {
+        height: 20%;
+      }
+    }
+  }
+  .modal__close {
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    width: 1.1em;
+    height: 1.1em;
+    cursor: pointer;
+  }
+
+  .modal__close:after,
+  .modal__close:before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 1.5em;
+    background: #ccc;
+    display: block;
+    transform: rotate(45deg);
+    left: 50%;
+    margin: -3px 0 0 -1px;
+    top: 0;
+  }
+
+  .modal__close:hover:after,
+  .modal__close:hover:before {
+    background: #aaa;
+  }
+
+  .modal__close:before {
+    transform: rotate(-45deg);
+  }
+
+  @media screen and (max-width: 600px) {
+    #container {
+      margin: 7%;
+      top: 20%;
+      background: rgb(230, 227, 227);
+    }
+
+    h1 {
+      font-size: 6vh;
+    }
+    p {
+      font-size: 3vh;
+    }
+
+    .modal__inner {
+      width: 90%;
+      height: 90%;
+      box-sizing: border-box;
+    }
+  }
+
+  /* Other
+   * =============================== */
+
+  .btn {
+    cursor: pointer;
+    background: #6dc0d5;
+    display: inline-block;
+    padding: 0.5em 1em;
+    color: #fff;
+    border-radius: 3px;
+  }
+
+  .btn:hover,
+  .btn:focus {
+    background: #8cdfd6;
+  }
+
+  .btn:active {
+    background: #27ae60;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) inset;
+  }
+
+  .btn--pink {
+    background: #dea2c0;
+  }
+
+  .btn--pink:hover,
+  .btn--pink:focus {
+    background: #dfbfdf;
+  }
+
+  .btn--pink:active {
+    background: #2980b9;
+  }
+
+  p img {
+    max-width: 200px;
+    height: auto;
+    float: left;
+    margin: 0 1em 1em 0;
+  }
+}

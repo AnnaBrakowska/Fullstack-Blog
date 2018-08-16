@@ -1,0 +1,21 @@
+<div class="ui special cards">
+  <% @my_posts.each do |post| %>
+    <div class="card">
+      <div class="blurring dimmable image">
+        <img class="posts" src=<%=post.image%> />
+      </div>
+      <div class="content"> 
+        <a class="header" a href="/specific_post/<%=post.id%>"><%=post.title%></a> 
+      </div>
+      <div class="extra content">
+        <a href="/myposts/<%=post.id%>/edit">
+          <i class="pencil icon"></i>Edit
+        </a>
+        <a href="/delete/<%=post.id%>">
+          <i class="trash alternate outline icon"></i>Delete
+        </a>  
+      </div>
+    </div>
+  <%end%>
+  </div>
+</div>

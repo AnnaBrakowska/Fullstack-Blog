@@ -1,0 +1,27 @@
+<div id="create_post">
+    <form method="POST" action="/myposts/<%=@post_id%>">
+        <input type="hidden" name="_method" value="PUT">
+
+        <div class="ui form">
+            <div class="field">
+                <label>Title</label>
+                <textarea type="text" rows="1" name ="title" placeholder="Please type a title...."><%=@current_post.title%></textarea>
+            </div>
+
+            <div class="field">
+                <label>Image</label>
+                    <input type="text" name="image" placeholder="Please enter image url..." value="<%=@current_post.image%>" ></input>
+                <label>Text</label>
+                    <textarea type="text" name="text" placeholder="Please type your article here..."><%=@current_post.text%></textarea>
+            </div>
+            
+            <div id="create_button">
+                <div class="ui buttons">
+                    <button class="ui button active">Cancel</button>
+                    <div class="or"></div>
+                    <button class="ui positive button">Save</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

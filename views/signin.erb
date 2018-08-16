@@ -1,0 +1,55 @@
+<div id="background"></div>
+<div id="container">
+    <h1>Welcom to Tech Notes</h1>
+    <div>
+        <h3>...where your notes really matter.</h3>
+        <p>Ideas and explenations you won’t find anywhere else.</p>
+        <p>
+            <label class="btn" for="modal-1">Sign In</label>
+            <label class="btn btn--pink" for="modal-2">Sign Up</label>
+        </p>
+    </div>
+</div>
+
+<input class="modal-state" id="modal-1" type="checkbox" />
+<div class="modal">
+    <label class="modal__bg" for="modal-1"></label>
+    <div class="modal__inner">
+    <label class="modal__close" for="modal-1"></label>
+    <h1>Sign In</h1>
+    <form action="/signin" method="post" class="ui form">
+        <input type="text" name="user_name" id="user_name" placeholder="Username">
+        <br>
+        <br>
+        <input type="password" name="password" id="password" placeholder="Password">
+        <br>
+        <br>
+        <button class="ui right labeled icon button">
+            <i class="check circle outline icon"></i>Log In
+        </button>
+    </form>
+  </div>
+</div>
+
+<input class="modal-state" id="modal-2" type="checkbox" />
+<div class="modal">
+  <label class="modal__bg" for="modal-2"></label>
+  <div class="modal__inner">
+    <label class="modal__close" for="modal-2"></label>
+    <h1>Sign Up</h1>
+    <form action="/signup" method="post" class="ui form">
+        <input type="text" name="user_name" id="user_name" placeholder="Username">
+        <input type="text" name="first_name" id="first_name" placeholder="First Name">
+        <input type="text" name="last_name" id="last_name" placeholder="Last Name">
+        <input type="text" name="email" id="email" placeholder="E-mail Address">
+        <input type="date" name="birthday" id="birthday" placeholder="Birthday">
+        <input type="text" name="image_url" id="image_url" placeholder="Image">
+        <input type="password" name="password" id="password" placeholder="Password">
+        <br>
+        <br>
+        <button class="ui right labeled icon button">
+            <i class="paper plane outline icon"></i>Sign Up
+        </button>
+    </form>
+    </div>
+</div>

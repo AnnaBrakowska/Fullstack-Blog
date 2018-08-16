@@ -1,0 +1,19 @@
+<div class="ui special cards">
+<% @userinfo_posts.each do |post| %>
+  <div class="card">
+    <div class="blurring dimmable image">
+     <img src=<%=post.image%> >
+    </div>
+    <div class="content"> 
+      <a class="header" a href="/specific_post/<%=post.id%>"><%=post.title%></a> 
+    </div>
+    <div class="extra content">
+      <a>
+        <i class="pencil icon"></i>
+      </a>
+      <span class="date">Created by <%= @user_name%></span>
+    </div>
+  </div>
+<%end%>
+</div>
+</div>
