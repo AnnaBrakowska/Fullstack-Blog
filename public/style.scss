@@ -192,7 +192,17 @@ body {
     p {
       font-size: 3vh;
     }
-
+    div#users {
+      display: flex;
+      justify-content: center;
+    }
+    .ui.menu {
+      display: flex;
+      flex-direction: column;
+      margin-left: 0%;
+      text-align: center;
+      font-size: 1rem;
+    }
     .modal__inner {
       width: 90%;
       height: 90%;

@@ -145,6 +145,15 @@ body {
       font-size: 6vh; }
     body p {
       font-size: 3vh; }
+    body div#users {
+      display: flex;
+      justify-content: center; }
+    body .ui.menu {
+      display: flex;
+      flex-direction: column;
+      margin-left: 0%;
+      text-align: center;
+      font-size: 1rem; }
     body .modal__inner {
       width: 90%;
       height: 90%;
