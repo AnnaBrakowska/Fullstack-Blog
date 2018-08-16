@@ -85,6 +85,7 @@ post '/createpost' do
 end
 
 
+
 get '/users_posts/:user_name' do
     @user_name = params[:user_name]
     @userinfo = User.find_by user_name: @user_name
@@ -119,6 +120,7 @@ get '/delete/:post_id' do
     PostTag.delete(@posttagtodelete)
 
     redirect "/myposts"
+
 end
 
 
