@@ -7,7 +7,7 @@
 * CSS/SASS
 * Semantic UI
 
-# Features
+# Features:
 * Creating new accounts
 * Editing / Deleting accounts
 * Creating/Editing/Accesing/Deleting new articles - feature available only for the logged in user
