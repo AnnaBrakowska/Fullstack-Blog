@@ -1,5 +1,5 @@
 require 'sinatra'
-require 'sinatra/reloader'
+# require 'sinatra/reloader'
 require 'sinatra/activerecord'
 require 'sinatra/flash'
 require './models/tag.rb'
@@ -7,8 +7,9 @@ require './models/user.rb'
 require './models/post.rb'
 require './models/post_tag.rb'
 
+
 enable :sessions
-set :database, {adapter: "postgresql", database: "rumblr"}
+
 
 
 
@@ -17,7 +18,7 @@ get '/' do
         @posts = Post.all
         redirect '/posts'
     else
-        erb :signin
+        erb :signin, :layout => :signinlayout
     end
 end
 
@@ -38,12 +39,12 @@ post '/signin' do
         redirect '/'
     else
         p ' authentication failed'
-    redirect '/signup'
+    redirect '/signin'
     end
 end
 
 get '/signup' do
-    erb :signup
+    erb :signin, :layout => :signinlayout
 end
 
 post '/signup' do
@@ -53,7 +54,6 @@ post '/signup' do
 end
 
 get "/signout" do
-
     session[:user_id] = nil
     redirect "/signin"
   end
