@@ -6,6 +6,8 @@ Link to the project: https://murmuring-gorge-85450.herokuapp.com/
 
 ![Alt text](/pic1.png)
 ![Alt text](/pic2.png)
+![Alt text](/pic3.png)
+![Alt text](/pic4.png)
 
 # Technologies:
 * Ruby
