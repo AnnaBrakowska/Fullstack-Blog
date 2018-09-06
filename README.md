@@ -1,4 +1,8 @@
-# Fullstack App that allowes user sharing tech related notes.
+# Fullstack Blog Application
+
+Application allowes user creating, deleting and editing technology related notes, creating, as well as editing and deleting accounts.
+
+Link to the project: https://murmuring-gorge-85450.herokuapp.com/
 
 # Technologies:
 * Ruby
