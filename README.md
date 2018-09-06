@@ -4,6 +4,9 @@ Application allowes user creating, deleting and editing technology related notes
 
 Link to the project: https://murmuring-gorge-85450.herokuapp.com/
 
+![Alt text](Screen Shot 2018-09-06 at 2.05.33 PM.png)
+
+
 # Technologies:
 * Ruby
 * Sinatra
